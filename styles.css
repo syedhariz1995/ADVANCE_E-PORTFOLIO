@@ -6,3 +6,44 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
+li{
+    list-style-type: none;
+}
+
+
+/* NAVIGATION */
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+}
+
+#personal-logo{
+    width: 160px;
+}
+
+.nav__link--list{
+    display: flex;
+}
+
+.nav__link{
+    margin: 0 12px;
+}
+
+.nav__link--anchor{
+    text-decoration: none;
+    font-size: 16px;
+    color: #242424;
+    font-weight: 700;
+}
+
+.fa-circle-half-stroke{
+    font-size: 22px;
+}
