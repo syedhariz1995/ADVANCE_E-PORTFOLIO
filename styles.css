@@ -68,8 +68,15 @@ p{
     height: 3px;
     right: 0;
     width: 0;
-    background-color: #242424;
     transition: all 300ms ease ;
+}
+
+.link__hover-effect-black{
+    padding-bottom: 2px;
+}
+
+.link__hover-effect--white{
+    padding-bottom: 4px;
 }
 
 .link__hover-effect-black:after{
