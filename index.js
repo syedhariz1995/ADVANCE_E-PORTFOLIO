@@ -35,3 +35,16 @@ function contact(event){
     //     success.classList += " modal__overlay--visible"
     //     console.log('It Worked 1')
     // }, 1000)
+
+
+
+let isModalOpen = false;                                            // Default is closed
+function toggleModal(){                                             // onClick in HTML
+    if(isModalOpen){                                                // If it's open
+        isModalOpen = false                                         // Make is false
+        return document.body.classList.remove("modal--open")        // Thus, closing it
+    }
+    isModalOpen = !isModalOpen;                                     // Else, false = true
+    document.body.classList += " modal--open"                       // Thus, opening it
+
+}
