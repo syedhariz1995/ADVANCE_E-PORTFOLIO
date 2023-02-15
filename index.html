@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hariz's E-Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/eede701a2c.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+         emailjs.init("k1hV8TSZePhdSIQzG");
+    })();
+</script>
 </head>
 <body>
     <section id="landing-page">
@@ -91,13 +100,13 @@
             <div class="modal__half modal__contact">
                 <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
                 <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities.</h4>
-                <form id="contact__form" action="">
+                <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label" >Name</label>
                         <input class="input" type="text" name="user_name" id="" required></input>
                     </div>
                     <div class="form__item">
-                        <label class="form__item--label">E-mail</label>
+                        <label class="form__item--label">Email</label>
                         <input class="input" type="email" name="user_email" id="" required></input>
                     </div>
                     <div class="form__item">
