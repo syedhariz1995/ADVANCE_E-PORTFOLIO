@@ -4,6 +4,25 @@
 
 
 
+// Move background shapes
+
+const scaleFactor = 1/20;
+function moveBackground(event){
+    const shapes = document.querySelectorAll(".shape");
+    const x = event.clientX*scaleFactor;
+    const y = event.clientY*scaleFactor;
+
+    for(let i = 0; i < shapes.length; i++){
+        const isOdd = i % 2 === 0;
+        const boolInt = isOdd ? -1 : 1
+        shapes[i].style.transform = `translate(${x*boolInt}px, ${y*boolInt}px)`
+    }
+}
+
+
+
+
+// Dark theme
 let contrastToggle = false
 function toggleContrast(){
     contrastToggle = !contrastToggle
@@ -19,7 +38,7 @@ function toggleContrast(){
 
 
 
-
+// Send form
 function contact(event){
     event.preventDefault();
     const loading = document.querySelector('.modal__overlay--loading');
@@ -43,18 +62,22 @@ function contact(event){
 
 }
 
-    // Fake data for testing
-    // const loading = document.querySelector('.modal__overlay--loading')
-    // const success = document.querySelector('.modal__overlay--success')
-    // loading.classList += " modal__overlay--visible"
-    // setTimeout(() => {
-    //     loading.classList.remove("modal__overlay--visible")
-    //     success.classList += " modal__overlay--visible"
-    //     console.log('It Worked 1')
-    // }, 1000)
+// Fake data for testing
+// const loading = document.querySelector('.modal__overlay--loading')
+// const success = document.querySelector('.modal__overlay--success')
+// loading.classList += " modal__overlay--visible"
+// setTimeout(() => {
+//     loading.classList.remove("modal__overlay--visible")
+//     success.classList += " modal__overlay--visible"
+//     console.log('It Worked 1')
+// }, 1000)
 
 
 
+
+
+
+// opening Modal
 let isModalOpen = false;                                            // Default is closed
 function toggleModal(){                                             // onClick in HTML
     if(isModalOpen){                                                // If it's open
